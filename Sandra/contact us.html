@@ -2,29 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Education | Mutonyi Sandra</title>
-    <link rel="stylesheet" href="style.css"> <style>
-        :root { --pink: #ff69b4; --lemon-green: #32cd32; --orange: #ffa500; }
-        body { font-family: sans-serif; margin: 0; background-color: #fffaf0; }
-        header { background-color: var(--pink); padding: 20px; text-align: center; border-bottom: 5px solid var(--lemon-green); }
-        .menu a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
-        .container { padding: 40px; text-align: center; }
-        table { width: 80%; margin: auto; border-collapse: collapse; background: white; }
-        th { background-color: var(--orange); color: white; padding: 15px; }
-        td { border: 1px solid #ddd; padding: 12px; }
-        footer { background-color: var(--orange); color: white; text-align: center; padding: 20px; margin-top: 50px; }
-    </style>
+    <title>Contact Us | Mutonyi Sandra</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-    <meta charset="utf-8">
-    <title>Mutonyi Sandra|
-        portfolio</title>
-        <link rel="stylesheet" href="style.css">
-        </head>
-        <body>
-            <header class="banner"> 
-   <!---heading--->
-     <div class="menu">
-         <a href="Index.html">Home</a>
+<body>
+
+<header> 
+    <div class="menu">
+        <a href="index.html">Home</a>
         <a href="my profile.html">Profile</a>
         <a href="Education.html">Education</a>
         <a href="hobbies.html">Hobbies</a>
@@ -33,12 +18,28 @@
     </div>
 </header>
 
-             <h><p style ="color: purple;">Contact Me </p></h>
-             <form action="/submit-form" method="po
-            <lable for ="name"><NAME:</label>
-            <input type="text" id="name"name=u<br>
-                <label for "Email">Email:</label>
-             <input type="email id"Email" name <br></form>
+<div class="container">
+    <div style="width: 100%;">
+        <h2 style="color: purple; margin: 0;">Contact Me</h2>
+        
+        <form action="#" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="username" placeholder="Your Name" required>
+            
+            <label for="Email">Email:</label>
+            <input type="email" id="Email" name="useremail" placeholder="Your Email Address" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required style="width: 100%; border-radius: 5px; border: 1px solid #ddd; padding: 10px; margin-top: 5px; box-sizing: border-box; font-family: sans-serif;"></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Mutonyi Sandra Portfolio | Designed for Excellence</p>
+</footer>
+
 </body>
 </html>
-        
