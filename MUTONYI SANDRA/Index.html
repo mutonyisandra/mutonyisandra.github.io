@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Mutonyi Sandra | Portfolio</title>
+
+    <style>
+        /* Color Theme & Variables */
+        :root {
+            --pink: #ff69b4;
+            --lemon-green: #32cd32;
+            --orange: #ffa500;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fffaf0; /* Light cream background */
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--pink);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--lemon-green);
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+            display: inline-block;
+        }
+
+        .menu a:hover {
+            color: var(--orange);
+            transform: scale(1.2) rotate(5deg); /* Animation on hover */
+        }
+
+        /* Main Content Layout */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 40px;
+            align-items: center;
+        }
+
+        /* Heart Shaped Frame for Image */
+        .profile-frame {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .heart-img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            /* Heart Shape Clip Path */
+            clip-path: path('M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.06 3.06 6.06 12 14.194 8.94-8.134 12-10.134 12-14.194 0-8.165-10.011-8.967-12-3.568z');
+            transform: scale(10); /* Adjusting path scale */
+            background-color: var(--orange);
+            border: 4px solid var(--lemon-green);
+        }
+
+        /* Standard Heart Shape using border-radius for better compatibility */
+        .heart-fallback {
+            width: 250px;
+            height: 250px;
+            background-color: var(--lemon-green);
+            position: relative;
+            transform: rotate(-45deg);
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        
+        .heart-fallback img {
+            width: 100%;
+            height: 100%;
+            transform: rotate(45deg) scale(1.4);
+            object-fit: cover;
+        }
+
+        .content-text {
+            flex: 2;
+            padding: 20px;
+            border-left: 3px solid var(--orange);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .business-list li {
+            list-style: none;
+            padding: 10px;
+            margin: 5px;
+            background: var(--lemon-green);
+            color: white;
+            display: inline-block;
+            border-radius: 5px;
+            animation: slideIn 0.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--orange);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            border-top: 5px solid var(--pink);
+        }
+    </style>
+
+<header>
+    <h1 style="color: white; margin: 0;">HELLO UGANDA</h1>
+    <div class="menu">
+         <a href="Index.html">Home</a>
+        <a href="my profile.html">Profile</a>
+        <a href="Education.html">Education</a>
+        <a href="hobbies.html">Hobbies</a>
+        <a href="mybusiness.html">Business</a>
+        <a href="contact us.html">Contact</a>
+    </div>
+</header>
+
+<div class="container" id="profile">
+    <div class="profile-frame">
+        <div class="heart-fallback">
+            <img src="photo.jpg" alt="Mutonyi Sandra">
+        </div>
+    </div>
+
+    <div class="content-text">
+        <h2 style="color: var(--pink);">My Personal Profile</h2>
+        <p><strong>Name:</strong> Mutonyi Sandra</p>
+        <p><strong>Email:</strong> mutonyisandra74@gmail.com</p>
+        <p>Hello! I am a passionate individual interested in technology, web development, and learning new skills to build a better future.</p>
+    </div>
+</div>
+
+<div class="container" style="background-color: white;" id="business">
+    <div class="content-text">
+        <h2 style="color: var(--orange);">SANDRA AND SONS HARDWARE</h2>
+        <p>Located in <strong>Namabasa Trading Centre</strong>, I am dedicated to providing high-quality building materials to my community.</p>
+        <h3>Materials Available:</h3>
+        <ul class="business-list">
+            <li style="animation-delay: 0.1s;">Wheelbarrows</li>
+            <li style="animation-delay: 0.2s;">Spades</li>
+            <li style="animation-delay: 0.3s;">Cement</li>
+            <li style="animation-delay: 0.4s;">Iron Sheets</li>
+            <li style="animation-delay: 0.5s;">Nails</li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Mutonyi Sandra Portfolio | Designed for Excellence</p>
+    <p>Contact: mutonyisandra74@gmail.com</p>
+</footer>
+
+</body>
+</html>
