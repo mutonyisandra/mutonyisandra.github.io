@@ -1,127 +1,161 @@
-<meta charset="utf-8">
-    <style>
-        /* Color Theme & Variables */
-        :root {
-            --pink: #ff69b4;
-            --lemon-green: #32cd32;
-            --orange: #ffa500;
-            --white: #ffffff;
-        }
+/* Color Theme & Variables */
+:root {
+    --pink: #ff69b4;
+    --lemon-green: #32cd32;
+    --orange: #ffa500;
+    --white: #ffffff;
+}
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color:#fffaf0; /* Light cream background */
-            color: #333;
-        }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fffaf0; /* Light cream background */
+    color: #333;
+}
 
-        /* Header Styles */
-        header {
-            background-color: var(--pink);
-            padding: 20px;
-            text-align: center;
-            border-bottom: 5px solid var(--lemon-green);
-        }
+/* Header Styles */
+header {
+    background-color: var(--pink);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid var(--lemon-green);
+}
 
-        .menu a {
-            color: black;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            transition: color 0.3s, transform 0.3s;
-            display: inline-block;
-        }
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+    display: inline-block;
+}
 
-        .menu a:hover {
-            color: var(--orange);
-            transform: scale(1.2) rotate(5deg); /* Animation on hover */
-        }
+.menu a:hover {
+    color: var(--orange);
+    transform: scale(1.2) rotate(5deg); /* Animation on hover */
+}
 
-        /* Main Content Layout */
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 40px;
-            align-items: center;
-        }
+/* Main Content Layout */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    align-items: center;
+    justify-content: center;
+}
 
-        /* Heart Shaped Frame for Image */
-        .profile-frame {
-            flex: 1;
-            min-width: 300px;
-            display: flex;
-            justify-content: center;
-            animation: fadeIn 2s ease-in;
-        }
+/* Standard Heart Shape using border-radius for better compatibility */
+.heart-fallback {
+    width: 250px;
+    height: 250px;
+    background-color: var(--lemon-green);
+    position: relative;
+    transform: rotate(-45deg);
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 20px auto;
+}
 
-        .heart-img {
-            width: 250px;
-            height: 250px;
-            object-fit: cover;
-            /* Heart Shape Clip Path */
-            clip-path: path('M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.06 3.06 6.06 12 14.194 8.94-8.134 12-10.134 12-14.194 0-8.165-10.011-8.967-12-3.568z');
-            transform: scale(10); /* Adjusting path scale */
-            background-color: var(--orange);
-            border: 4px solid var(--lemon-green);
-        }
+.heart-fallback img {
+    width: 100%;
+    height: 100%;
+    transform: rotate(45deg) scale(1.4);
+    object-fit: cover;
+}
 
-        /* Standard Heart Shape using border-radius for better compatibility */
-        .heart-fallback {
-            width: 250px;
-            height: 250px;
-            background-color: var(--lemon-green);
-            position: relative;
-            transform: rotate(-45deg);
-            overflow: hidden;
-            border-radius: 20px;
-        }
-        
-        .heart-fallback img {
-            width: 100%;
-            height: 100%;
-            transform: rotate(45deg) scale(1.4);
-            object-fit: cover;
-        }
+.content-text {
+    flex: 2;
+    padding: 20px;
+    border-left: 3px solid var(--orange);
+    min-width: 280px;
+}
 
-        .content-text {
-            flex: 2;
-            padding: 20px;
-            border-left: 3px solid var(--orange);
-        }
+/* Tables */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+}
+th {
+    background-color: var(--orange);
+    color: white;
+    padding: 15px;
+}
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
 
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-        .business-list li {
-            list-style: none;
-            padding: 10px;
-            margin: 5px;
-            background: var(--lemon-green);
-            color: white;
-            display: inline-block;
-            border-radius: 5px;
-            animation: slideIn 0.5s ease-out forwards;
-            opacity: 0;
-        }
+.business-list li {
+    list-style: none;
+    padding: 10px;
+    margin: 5px;
+    background: var(--lemon-green);
+    color: white;
+    display: inline-block;
+    border-radius: 5px;
+    animation: slideIn 0.5s ease-out forwards;
+    opacity: 0;
+}
 
-        @keyframes slideIn {
-            from { transform: translateX(-50px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
+@keyframes slideIn {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
 
-        /* Footer */
-        footer {
-            background-color: var(--orange);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            border-top: 5px solid var(--pink);
-        }
-    </style>
+/* Footer */
+footer {
+    background-color: var(--orange);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    border-top: 5px solid var(--pink);
+}
+
+/* Form Styles */
+form {
+    background: white;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left;
+}
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #555;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+form button {
+    background-color: var(--pink);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+form button:hover {
+    background-color: var(--orange);
+}
